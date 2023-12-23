@@ -64,9 +64,9 @@ const FathersBlessingList = () => {
       );
     } else {
       content = (
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
           {fathersBlessingVideos.map((video, index) => (
-            <div class="bg-white rounded-lg border" key={video.id}>
+            <div className="bg-white rounded-lg border" key={video.id}>
               <div className="w-full h-48 rounded-md object-cover">
                 <ReactPlayer
                   playing={index == 0 && true}
@@ -77,8 +77,8 @@ const FathersBlessingList = () => {
                 />
               </div>
 
-              <div class="px-4 py-4">
-                <div class="font-bold text-xl mb-2">
+              <div className="px-4 py-4">
+                <div className="font-bold text-xl mb-2">
                   {video.title} ~ {video.speaker}
                 </div>
               </div>
@@ -91,8 +91,8 @@ const FathersBlessingList = () => {
 
   return (
     <div>
-      <div class="bg-gradient-to-bl from-gray-100 to-gray-300 flex items-center justify-center">
-        <div class="container mx-auto mx-auto p-4">{content}</div>
+      <div className="bg-gradient-to-bl from-gray-100 to-gray-300 flex items-center justify-center">
+        <div className="container mx-auto mx-auto p-4">{content}</div>
       </div>
     </div>
   );
