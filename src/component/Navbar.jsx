@@ -59,6 +59,7 @@ const profileLinks = [
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [subL, setSubL] = useState(false);
   const [profileNav, setProfileNav] = useState(false);
   const [logoutNav, setLogoutNav] = useState(false);
 
@@ -160,6 +161,7 @@ const Navbar = () => {
                     ref={triggerNav}
                     key={index}
                     className="group inline-block relative"
+                    onClick={() => setNav(!nav)}
                   >
                     <p className="cool-link cursor-pointer">{name}</p>
 
@@ -179,7 +181,12 @@ const Navbar = () => {
                     </ul>
                   </li>
                 ) : (
-                  <li ref={triggerNav} key={index} className="cool-link">
+                  <li
+                    onClick={() => setNav(!nav)}
+                    ref={triggerNav}
+                    key={index}
+                    className="cool-link"
+                  >
                     <NavLink to={link} duration={500}>
                       {name}
                     </NavLink>
@@ -190,16 +197,45 @@ const Navbar = () => {
           </div>
 
           {nav && (
-            <nav className="md:hidden bg-primary uppercase p-4 fixed top-[8vh] left-0 right-0">
+            <nav className="md:hidden bg-primary uppercase p-4 fixed top-[11vh] left-0 right-0">
               <ul className="flex flex-col">
-                {navLinks.map(({ name, link }, index) => (
+                {navLinks.map(({ name, link, subLink }, index) => (
                   <li
                     key={index}
                     className="block py-2 pl-3 pr-4 rounded hover:bg-white hover:text-primary"
                   >
-                    <NavLink to={link} duration={500} className="">
-                      {name}
+                    <NavLink to={link} duration={500}>
+                      {subLink ? (
+                        <div
+                          className="flex justify-between"
+                          onClick={() => setSubL(!subL)}
+                        >
+                          {name}
+                          <span>+</span>
+                        </div>
+                      ) : (
+                        <>
+                          <span onClick={() => setNav(!nav)}>{name}</span>
+                        </>
+                      )}
                     </NavLink>
+
+                    {subL &&
+                      subLink?.map(({ name, link }, index) => (
+                        <div
+                          onClick={() => setNav(!nav)}
+                          key={index}
+                          className="block py-2 pl-3 pr-4 rounded hover:bg-white hover:text-primary"
+                        >
+                          <NavLink
+                            to={link}
+                            duration={500}
+                            className="flex justify-between"
+                          >
+                            {name}
+                          </NavLink>
+                        </div>
+                      ))}
                   </li>
                 ))}
               </ul>
