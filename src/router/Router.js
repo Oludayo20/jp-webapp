@@ -22,7 +22,6 @@ import AddMinistry from '../pages/AddMinistry';
 const Router = () => {
   return (
     <Routes>
-      {/* <Route element={<UseGetProduct />}> */}
       <Route path="/" element={<Navigate to="/home" />} />
       <Route path="*" element={<ConstructionPage />} />
       <Route path="home" element={<Home />} />

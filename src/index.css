@@ -5,11 +5,14 @@
 
 /* tailwind.css */
 
+body {
+  font-family: 'Nunito', sans-serif;
+}
 
 
 @layer base {
   html {
-    font-family: "Monaco";
+    font-family: 'Nunito', sans-serif;
   }
 }
 

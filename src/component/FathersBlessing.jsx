@@ -69,7 +69,7 @@ const FathersBlessing = () => {
     <section className="bg-primary bg-cover bg-no-repeat bg-center py-16 lg:py-36">
       <div className="text-white container md:flex md:justify-between ">
         <div className="md:w-1/2 md:mr-4 mt-16">
-          <h1 className="text-6xl font-medium mb-4 capitalize">
+          <h1 className="text-3xl md:text-6xl font-medium mb-4 capitalize">
             Father's Blessing for <br /> The Week
           </h1>
           <p>

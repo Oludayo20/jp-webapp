@@ -50,7 +50,7 @@ const Home = () => {
 
       <Resource />
 
-      <div className="relative h-[50vh]">
+      <div className="relative h-[60vh]">
         <img
           src={handsBanner2}
           alt="Banner Image"
@@ -76,7 +76,7 @@ const Home = () => {
             Wednesday services in Church or Online.
             <div className="mt-4 lg:mt-12">
               <Link
-                to="/shop"
+                to="/stream-service"
                 className="bg-white border border-primary text-primary px-8 py-3 font-medium lg:text-2xl rounded-md hover:bg-primary hover:text-white"
               >
                 Watch Online Services

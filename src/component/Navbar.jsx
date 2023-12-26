@@ -197,14 +197,18 @@ const Navbar = () => {
           </div>
 
           {nav && (
-            <nav className="md:hidden bg-primary uppercase p-4 fixed top-[11vh] left-0 right-0">
+            <nav
+              className={`md:hidden bg-primary uppercase p-4 fixed top-[11vh] left-0 right-0 ${
+                !top && 'top-[7vh]'
+              }`}
+            >
               <ul className="flex flex-col">
                 {navLinks.map(({ name, link, subLink }, index) => (
                   <li
                     key={index}
                     className="block py-2 pl-3 pr-4 rounded hover:bg-white hover:text-primary"
                   >
-                    <NavLink to={link} duration={500}>
+                    <div duration={500}>
                       {subLink ? (
                         <div
                           className="flex justify-between"
@@ -215,10 +219,12 @@ const Navbar = () => {
                         </div>
                       ) : (
                         <>
-                          <span onClick={() => setNav(!nav)}>{name}</span>
+                          <NavLink to={link} onClick={() => setNav(!nav)}>
+                            {name}
+                          </NavLink>
                         </>
                       )}
-                    </NavLink>
+                    </div>
 
                     {subL &&
                       subLink?.map(({ name, link }, index) => (
