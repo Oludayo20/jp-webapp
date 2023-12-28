@@ -10,7 +10,7 @@ const StreamService = () => {
               Click{' '}
               <a
                 className="mx-1 font-bold"
-                href="https://youtube.com/jp-honorable"
+                href="https://youtube.com/jp-honourable"
               >
                 Here
               </a>{' '}

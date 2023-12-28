@@ -53,7 +53,7 @@ const AboutUs = () => {
       <section className="bg-cover bg-no-repeat bg-center py-16 lg:py-36">
         <BreadCrumb pageName="About Us" />
         <div className="mt-16 text-primary container md:flex md:justify-between ">
-          <div className="md:w-1/2 md:mr-4">
+          <div className="md:w-1/2 md:mr-4 mb-4">
             <h1 className="text-2xl md:text-4xl font-bold mb-4 capitalize">
               THE CONGREGATION OF THE HONOURABLES
             </h1>
@@ -78,7 +78,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="mt-16 text-primary container md:flex md:justify-between ">
-          <div className="md:w-[30vw] h-full">
+          <div className="md:w-[30vw] h-full mb-4">
             <div className="w-full h-full">
               <img src={jp} alt="Adeboye" className="w-full h-full" />
             </div>
@@ -153,7 +153,7 @@ const AboutUs = () => {
                     <motion.div
                       animate={{ x: 15 }}
                       transition={{ ease: 'easeOut', duration: 0.3 }}
-                      className={`w-full mt-2 ml-8`}
+                      className={`px-4 w-full mt-2`}
                     >
                       <p className="text-gray-700">{person.description}</p>
                     </motion.div>

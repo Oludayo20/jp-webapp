@@ -19,6 +19,7 @@ import ContactUs from '../pages/ContactUs';
 import TheMinistry from '../pages/TheMinistry';
 import AddMinistry from '../pages/AddMinistry';
 import AboutUs from '../pages/AboutUs';
+import YouthProvince from '../pages/YouthProvince';
 
 const Router = () => {
   return (
@@ -44,6 +45,7 @@ const Router = () => {
       <Route path="the-ministry" element={<TheMinistry />} />
       <Route path="add-department" element={<AddMinistry />} />
       <Route path="about-us" element={<AboutUs />} />
+      <Route path="youth-province" element={<YouthProvince />} />
     </Routes>
   );
 };

@@ -20,7 +20,7 @@ const navLinks = [
       { name: 'Career Training', link: 'career training' },
       { name: 'Missionary Statement', link: 'missionary statement' },
       { name: 'Stream Service', link: 'videos/stream-service' },
-      { name: 'Youth Province', link: 'youth province' },
+      { name: 'Youth Province', link: 'youth-province' },
       { name: 'Ministers', link: 'ministers' },
       { name: 'Jobs', link: 'jobs' }
     ]
@@ -124,7 +124,7 @@ const Navbar = () => {
           <NavLink to="home" className="flex items-center">
             <img src={jpLogo} className="h-8 w-12 mr-3" alt="JP Logo" />
             <span className="font-bold self-center text-2xl font-signature whitespace-nowrap">
-              JP - Honorable
+              JP - Honourable
             </span>
           </NavLink>
 
