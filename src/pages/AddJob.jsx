@@ -175,6 +175,7 @@ const AddJob = () => {
               value={jobData.description}
               onChange={handleChange}
               className="block border border-primary p-1.5 w-full"
+              placeholder="short description use <br> to insert new line..."
             />
           </div>
         </div>

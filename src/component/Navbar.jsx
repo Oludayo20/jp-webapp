@@ -15,10 +15,11 @@ const navLinks = [
     name: 'Explore',
     link: 'explore',
     subLink: [
+      { name: 'About Us', link: 'about-us' },
       { name: 'Video Library', link: 'videos/fathers-blessing' },
       { name: 'Career Training', link: 'career training' },
       { name: 'Missionary Statement', link: 'missionary statement' },
-      { name: 'Stream Service', link: 'stream Service' },
+      { name: 'Stream Service', link: 'videos/stream-service' },
       { name: 'Youth Province', link: 'youth province' },
       { name: 'Ministers', link: 'ministers' },
       { name: 'Jobs', link: 'jobs' }
@@ -119,7 +120,7 @@ const Navbar = () => {
           !top && 'bg-primary/60 backdrop-blur-sm shadow-lg top-0'
         }`}
       >
-        <div className="h-[7vh] max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="h-full max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink to="home" className="flex items-center">
             <img src={jpLogo} className="h-8 w-12 mr-3" alt="JP Logo" />
             <span className="font-bold self-center text-2xl font-signature whitespace-nowrap">

@@ -6,7 +6,8 @@ const MediaData = {
   title: '',
   category: '',
   speaker: '',
-  video: ''
+  video: '',
+  description: ''
 };
 
 const AddMedias = () => {
@@ -153,6 +154,22 @@ const AddMedias = () => {
               accept="video/*"
               onChange={handleChange}
               className="block border border-primary p-1.5 w-full"
+            />
+          </div>
+        </div>
+
+        <div className="flex space-x-5 mt-3">
+          <div className="w-full">
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Description:
+            </label>
+            <textarea
+              type="text"
+              name="description"
+              value={mediaData.description}
+              onChange={handleChange}
+              className="block border border-primary p-1.5 w-full"
+              placeholder="short description use <br> to insert new line..."
             />
           </div>
         </div>

@@ -69,7 +69,7 @@ const FathersBlessingList = () => {
             <div className="bg-white rounded-lg border" key={video.id}>
               <div className="w-full h-48 rounded-md object-cover">
                 <ReactPlayer
-                  playing={index == 0 && true}
+                  // playing={index == 0 && true}
                   url={video.videoUrl}
                   width="100%"
                   height="100%"

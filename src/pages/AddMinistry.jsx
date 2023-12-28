@@ -116,6 +116,7 @@ const AddMinistry = () => {
               value={ministryData.description}
               onChange={handleChange}
               className="block border border-primary p-1.5 w-full"
+              placeholder="Description use <br> to insert new line.."
             />
           </div>
         </div>
@@ -131,6 +132,7 @@ const AddMinistry = () => {
               value={ministryData.bio}
               onChange={handleChange}
               className="block border border-primary p-1.5 w-full"
+              placeholder="Team Lead bio use <br> to insert new line..."
             />
           </div>
         </div>

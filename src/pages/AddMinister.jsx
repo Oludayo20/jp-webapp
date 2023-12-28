@@ -159,10 +159,10 @@ const AddMinister = () => {
             </label>
             <textarea
               name="bio"
-              placeholder="Your bio..."
               value={ministerData.bio}
               onChange={handleChange}
               className="block border border-primary p-1.5 w-full"
+              placeholder="your bio use <br> to insert new line.."
             />
           </div>
         </div>

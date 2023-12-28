@@ -113,3 +113,18 @@ code {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
+
+.transition-height {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.description {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+}
+
+.description.open {
+  height: auto;
+}

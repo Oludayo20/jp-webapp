@@ -18,6 +18,7 @@ const FathersBlessing = () => {
   });
 
   let content;
+  let contentDetails;
 
   if (isLoading)
     content = (
@@ -53,10 +54,39 @@ const FathersBlessing = () => {
       .sort((a, b) => a.timestamp - b.timestamp)
       .slice(0, 1);
 
+    contentDetails = fathersBlessingVideos.map((video) => (
+      <div className="md:w-1/2 md:mr-4 mt-16" key={video.id}>
+        <h1 className="text-3xl md:text-6xl font-medium mb-4 capitalize">
+          {video.title}
+        </h1>
+        {video.description ? (
+          <p
+            dangerouslySetInnerHTML={{
+              __html: video?.description
+            }}
+          ></p>
+        ) : (
+          <>
+            <p>Short prayer for you today.</p>
+          </>
+        )}
+        Click on play!!
+        <div className="mt-12">
+          <Link
+            to="/videos/fathers-blessing"
+            className="bg-white border border-white text-primary px-8 py-3 font-medium 
+                    rounded-md"
+          >
+            Watch More of this Here
+          </Link>
+        </div>
+      </div>
+    ));
+
     content = fathersBlessingVideos.map((video) => (
       <ReactPlayer
         key={video.id}
-        playing={true}
+        // playing={true}
         url={video.videoUrl}
         width="100%"
         height="100%"
@@ -68,28 +98,9 @@ const FathersBlessing = () => {
   return (
     <section className="bg-primary bg-cover bg-no-repeat bg-center py-16 lg:py-36">
       <div className="text-white container md:flex md:justify-between ">
-        <div className="md:w-1/2 md:mr-4 mt-16">
-          <h1 className="text-3xl md:text-6xl font-medium mb-4 capitalize">
-            Father's Blessing for <br /> The Week
-          </h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam{' '}
-            <br />
-            accusantium perspiciatis, sapiente magni eos dolorum ex quos dolores
-            odio
-          </p>
-          <div className="mt-12">
-            <Link
-              to="/videos/fathers-blessing"
-              className="bg-white border border-white text-primary px-8 py-3 font-medium 
-                    rounded-md"
-            >
-              Watch More of this Here
-            </Link>
-          </div>
-        </div>
+        {contentDetails}
 
-        <div className="md:w-[30vw] h-full mt-4 md:mt-0">
+        <div className="md:w-[30vw] h-full mt-4">
           <div className="fb-video w-full h">{content}</div>
         </div>
       </div>

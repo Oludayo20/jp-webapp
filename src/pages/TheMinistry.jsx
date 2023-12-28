@@ -11,9 +11,9 @@ const TheMinistry = () => {
     isError,
     error
   } = useFetchDepartmentQuery('departmentList', {
-    // pollingInterval: 60000,
-    // refetchOnFocus: true,
-    // refetchOnMountOrArgChange: true
+    pollingInterval: 60000,
+    refetchOnFocus: true,
+    refetchOnMountOrArgChange: true
   });
 
   const [selectedDepartment, setSelectedDepartment] = useState(
@@ -49,7 +49,6 @@ const TheMinistry = () => {
     );
 
   useEffect(() => {
-    // Ensure to update the selectedDepartment when the departments change
     setSelectedDepartment(departments?.[0]);
   }, [departments]);
 

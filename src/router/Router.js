@@ -18,6 +18,7 @@ import Volunteer from '../pages/Volunteer';
 import ContactUs from '../pages/ContactUs';
 import TheMinistry from '../pages/TheMinistry';
 import AddMinistry from '../pages/AddMinistry';
+import AboutUs from '../pages/AboutUs';
 
 const Router = () => {
   return (
@@ -29,7 +30,7 @@ const Router = () => {
         <Route path="fathers-blessing" element={<FathersBlessingList />} />
         <Route path="short-messages" element={<ShortMessageList />} />
         <Route path="stream-service" element={<StreamService />} />
-        <Route path="add-media" element={<AddMedias />} />
+        <Route path="add-videos" element={<AddMedias />} />
       </Route>
       <Route path="ministers" element={<Ministers />} />
       <Route path="add-ministers" element={<AddMinister />} />
@@ -42,6 +43,7 @@ const Router = () => {
       <Route path="contact-us" element={<ContactUs />} />
       <Route path="the-ministry" element={<TheMinistry />} />
       <Route path="add-department" element={<AddMinistry />} />
+      <Route path="about-us" element={<AboutUs />} />
     </Routes>
   );
 };

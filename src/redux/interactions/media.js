@@ -29,6 +29,7 @@ export const addMediaInteraction = async (data) => {
       category: data.category,
       speaker: data.speaker,
       videoUrl: downloadURL,
+      description: data.description,
       date: Date.now()
     };
 

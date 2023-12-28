@@ -8,7 +8,7 @@ const BreadCrumb = ({ pageName }) => {
 
   return (
     <div className="container py-4 flex items-center gap-3">
-      <div onClick={goBack} className="text-primary text-base">
+      <div onClick={goBack} className="cursor-pointer text-primary text-base">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

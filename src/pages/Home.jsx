@@ -76,10 +76,10 @@ const Home = () => {
             Wednesday services in Church or Online.
             <div className="mt-4 lg:mt-12">
               <Link
-                to="/stream-service"
+                to="/videos/stream-service"
                 className="bg-white border border-primary text-primary px-8 py-3 font-medium lg:text-2xl rounded-md hover:bg-primary hover:text-white"
               >
-                Watch Online Services
+                Watch our online services
               </Link>
             </div>
           </p>
@@ -87,7 +87,7 @@ const Home = () => {
       </div>
 
       <div className="container mx-auto py-9 md:py-12 px-4 md:px-6">
-        <div className="flex items-strech justify-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 lg:space-x-8">
+        <div className="flex items-stretch justify-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 lg:space-x-8">
           <div className="flex flex-col md:flex-row items-strech justify-between bg-primary py-6 pl-6 md:py-12 lg:pl-12 lg:py-0 md:w-8/12 lg:w-7/12 xl:w-8/12 2xl:w-9/12">
             <div className="flex flex-col justify-center md:w-1/2">
               <h1 className="text-3xl lg:text-4xl font-semibold text-white">
