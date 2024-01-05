@@ -20,12 +20,16 @@ import TheMinistry from '../pages/TheMinistry';
 import AddMinistry from '../pages/AddMinistry';
 import AboutUs from '../pages/AboutUs';
 import YouthProvince from '../pages/YouthProvince';
+import Login from '../pages/Login';
+import Register from '../pages/register';
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/home" />} />
       <Route path="*" element={<ConstructionPage />} />
+      <Route path="register" element={<Register />} />
+      <Route path="login" element={<Login />} />
       <Route path="home" element={<Home />} />
       <Route path="videos" element={<VideoLayout />}>
         <Route path="fathers-blessing" element={<FathersBlessingList />} />

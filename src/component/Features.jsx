@@ -22,7 +22,7 @@ const Features = () => {
           </div>
           <div>
             <h4 className="font-medium capitalize text-lg">Fellowship</h4>
-            <p className="text-gray-700 text-sm">Lorem, ipsum dolor</p>
+            <p className="text-gray-700 text-sm">Fellowship with us</p>
           </div>
         </div>
         <div
@@ -43,7 +43,7 @@ const Features = () => {
           </div>
           <div>
             <h4 className="font-medium capitalize text-lg">Communion</h4>
-            <p className="text-gray-700 text-sm">Lorem, ipsum dolor</p>
+            <p className="text-gray-700 text-sm">Pertake in communion</p>
           </div>
         </div>
         <div
@@ -64,7 +64,7 @@ const Features = () => {
           </div>
           <div>
             <h4 className="font-medium capitalize text-lg">Impactation</h4>
-            <p className="text-gray-700 text-sm">Lorem, ipsum dolor</p>
+            <p className="text-gray-700 text-sm">Impactation moments</p>
           </div>
         </div>
         <div
@@ -97,7 +97,7 @@ const Features = () => {
           </div>
           <div>
             <h4 className="font-medium capitalize text-lg">Christ Care</h4>
-            <p className="text-gray-700 text-sm">Lorem, ipsum dolor</p>
+            <p className="text-gray-700 text-sm">Christ care center</p>
           </div>
         </div>
       </div>

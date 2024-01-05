@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { selectUser } from '../redux/slice/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../redux/slice/authSlice';
 import jpLogo from '../assets/images/joseph_palace_logo.jpg';
 
 const navLinks = [
@@ -106,7 +104,7 @@ const Navbar = () => {
   }, [nav, profileNav]);
 
   const onLogout = () => {
-    dispatch(logout());
+    // dispatch(logout());
     navigate('/home');
   };
 
