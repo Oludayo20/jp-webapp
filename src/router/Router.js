@@ -21,7 +21,7 @@ import AddMinistry from '../pages/AddMinistry';
 import AboutUs from '../pages/AboutUs';
 import YouthProvince from '../pages/YouthProvince';
 import Login from '../pages/Login';
-import Register from '../pages/register';
+import Register from '../pages/Register';
 
 const Router = () => {
   return (
