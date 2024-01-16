@@ -5,7 +5,7 @@ import { ministerApi } from './slice/ministerApi';
 import { jobApi } from './slice/jobApi';
 import { departmentApi } from './slice/departmentApi';
 import { setupListeners } from '@reduxjs/toolkit/query';
-// import authReducer from '../features/auth/authSlice';
+import userReducer from '../redux/slice/userSlice';
 
 export const store = configureStore({
   reducer: {
@@ -13,7 +13,8 @@ export const store = configureStore({
     [mediaApi.reducerPath]: mediaApi.reducer,
     [ministerApi.reducerPath]: ministerApi.reducer,
     [jobApi.reducerPath]: jobApi.reducer,
-    [departmentApi.reducerPath]: departmentApi.reducer
+    [departmentApi.reducerPath]: departmentApi.reducer,
+    user: userReducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(

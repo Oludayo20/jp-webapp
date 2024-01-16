@@ -1,7 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import newsL from '../assets/images/newsL.jpg';
+import { toast } from 'react-toastify';
+import { saveSubscribers } from '../redux/interactions/newsLetter';
+
+const UserData = {
+  name: '',
+  email: ''
+};
 
 const NewsLatter = () => {
+  const [userData, setUserData] = useState(UserData);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setUserData((prevUserData) => ({ ...prevUserData, [name]: value }));
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    if (!userData.email || !userData.name)
+      return toast.error('Name and email required');
+    await saveSubscribers(userData);
+  };
+
   return (
     <div className="2xl:mx-auto mx-4 py-2 z-1">
       <div className="w-full relative flex items-center justify-center">
@@ -18,9 +40,24 @@ const NewsLatter = () => {
           <div className="sm:border border-white flex-col sm:flex-row flex items-center lg:w-5/12 w-full mt-12 space-y-4 sm:space-y-0">
             <input
               className="border border-white sm:border-transparent text-base w-full font-medium leading-none text-white p-4 focus:outline-none bg-transparent placeholder-white"
-              placeholder="Email Address"
+              placeholder="Name"
+              type="text"
+              name="name"
+              value={userData.name}
+              onChange={handleChange}
             />
-            <button className="focus:outline-none focus:ring-offset-2 focus:ring border border-white sm:border-transparent w-full sm:w-auto bg-white py-4 px-6 hover:bg-opacity-75">
+            <input
+              className="border border-white sm:border-transparent text-base w-full font-medium leading-none text-white p-4 focus:outline-none bg-transparent placeholder-white"
+              placeholder="Email Address"
+              type="email"
+              name="email"
+              value={userData.email}
+              onChange={handleChange}
+            />
+            <button
+              onClick={onSubmit}
+              className="focus:outline-none focus:ring-offset-2 focus:ring border border-white sm:border-transparent w-full sm:w-auto bg-white py-4 px-6 hover:bg-opacity-75"
+            >
               Subscribe
             </button>
           </div>

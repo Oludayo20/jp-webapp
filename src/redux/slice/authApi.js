@@ -12,7 +12,7 @@ export const authApi = createApi({
   reducerPath: 'authApi',
   baseQuery: fakeBaseQuery(),
   endpoints: (builder) => ({
-    fetchUser: builder.query({
+    fetchUser: builder.mutation({
       async queryFn(userId) {
         const response = await getUserByIdInteraction(userId);
         return { data: response };
@@ -58,7 +58,7 @@ export const authApi = createApi({
 });
 
 export const {
-  useFetchUserQuery,
+  useFetchUserMutation,
   useRegisterMutation,
   useGoogleMutation,
   useLoginMutation,

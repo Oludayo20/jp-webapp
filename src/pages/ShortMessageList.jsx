@@ -1,7 +1,6 @@
 import React from 'react';
 import { useFetchMediaQuery } from '../redux/slice/mediaApi';
 import { toast } from 'react-toastify';
-import Spinner from '../utils/Spinner';
 import ReactPlayer from 'react-player';
 
 const ShortMessageList = () => {

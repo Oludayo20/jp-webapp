@@ -22,6 +22,8 @@ import AboutUs from '../pages/AboutUs';
 import YouthProvince from '../pages/YouthProvince';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
+import ProtectedRoute from './ProtectedRoute';
+import AdminLayout from '../component/AdminLayout';
 
 const Router = () => {
   return (
@@ -35,21 +37,26 @@ const Router = () => {
         <Route path="fathers-blessing" element={<FathersBlessingList />} />
         <Route path="short-messages" element={<ShortMessageList />} />
         <Route path="stream-service" element={<StreamService />} />
-        <Route path="add-videos" element={<AddMedias />} />
       </Route>
       <Route path="ministers" element={<Ministers />} />
-      <Route path="add-ministers" element={<AddMinister />} />
       <Route path="ministers/:id" element={<Minister />} />
       <Route path="jobs" element={<Jobs />} />
-      <Route path="add-jobs" element={<AddJob />} />
       <Route path="job/:id" element={<Job />} />
       <Route path="calender" element={<Calender />} />
       <Route path="volunteer" element={<Volunteer />} />
       <Route path="contact-us" element={<ContactUs />} />
       <Route path="the-ministry" element={<TheMinistry />} />
-      <Route path="add-department" element={<AddMinistry />} />
       <Route path="about-us" element={<AboutUs />} />
       <Route path="youth-province" element={<YouthProvince />} />
+
+      <Route path="/*" element={<ProtectedRoute />}>
+        <Route element={<AdminLayout />}>
+          <Route path="add-department" element={<AddMinistry />} />
+          <Route path="add-jobs" element={<AddJob />} />
+          <Route path="add-ministers" element={<AddMinister />} />
+          <Route path="add-videos" element={<AddMedias />} />
+        </Route>
+      </Route>
     </Routes>
   );
 };

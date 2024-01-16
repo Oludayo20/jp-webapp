@@ -10,6 +10,7 @@ import {
   signInWithEmailAndPassword,
   signOut
 } from 'firebase/auth';
+import UseAuth from '../../hooks/useAuth';
 
 export const registerInteraction = async (data) => {
   try {
@@ -62,7 +63,7 @@ export const signInWithGoogleInteraction = async () => {
       });
     }
 
-    return 'Successful!!'
+    return 'Successful!!';
   } catch (error) {
     console.error('Error signing in with Google:', error);
     return error;
@@ -93,6 +94,7 @@ export const getUserByIdInteraction = async (userId) => {
     if (docSnap.exists()) {
       const user = docSnap.data();
 
+      UseAuth(user);
       return user;
     } else {
       return 'No user found!!';
